@@ -4,6 +4,7 @@ import sequelize from '../instances/mysql';
 export interface userType extends Model {
     id: number;
     name: string;
+    email: string;
     password: string;
     confirmPassword: string;
 }

@@ -12,7 +12,7 @@ export const Container = styled.div`
     color: white;
 `;
 export const FormContainer = styled.div`
-    width: 30%;
+    width: 20%;
     background-color: #555;
     height: 500px;
     display: flex;

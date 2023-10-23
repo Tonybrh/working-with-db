@@ -3,7 +3,8 @@ import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import verifyLogin from 'src/service/verifyLogin';
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const schema = yup.object({
     password: yup.string().required('Campo obrigatório').trim(),
     email: yup
@@ -58,6 +59,7 @@ const LoginPage: React.FC = () => {
                     <L.Submit type="submit" value="Enviar" />
                 </L.Form>
             </L.FormContainer>
+            <ToastContainer theme="dark" />
         </L.Container>
     );
 };
