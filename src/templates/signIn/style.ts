@@ -20,12 +20,18 @@ export const FormContainer = styled.div`
     border-radius: 10px;
     margin-bottom: 10px;
     @media (max-width: 1100px) {
+        width: 30%;
+    }
+    @media (max-width: 800px) {
         width: 50%;
+    }
+    @media (max-width: 500px) {
+        width: 70%;
     }
 `;
 export const Title = styled.h1`
-    text-align: center;
     color: white;
+    margin-left: 20px;
 `;
 export const Form = styled.form`
     display: flex;
@@ -38,8 +44,8 @@ export const InputContainer = styled.div`
     display: flex;
     justify-content: space-around;
     flex-direction: column;
-    margin-left: 30px;
-    //gap: 5px;
+    margin-left: 20px;
+    gap: 5px;
 `;
 export const InputLabel = styled.label`
     color: white;
@@ -50,7 +56,7 @@ export const Input = styled.input`
     border-radius: 5px;
     height: 25px;
     padding-left: 10px;
-    width: 50%;
+    width: 70%;
 `;
 export const Submit = styled.input`
     width: 30%;
@@ -69,7 +75,25 @@ export const Submit = styled.input`
 export const SpanError = styled.span`
     color: #d53e3e;
     font-weight: bold;
+    font-size: 10px;
 `;
 export const LoginLink = styled(Link)`
     color: white;
+    border-radius: 5px;
+    position: relative;
+    font-size: 14px;
+    text-decoration: none;
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 100%;
+        height: 2px;
+        background-color: #fff; /* Cor do sublinhado, altere conforme necessário */
+        transition: right 0.3s;
+    }
+    &:hover::before {
+        right: 0;
+    }
 `;

@@ -35,8 +35,8 @@ const loginUser = async (req: NextApiRequest, res: NextApiResponse) => {
                     message: 'Login efetuado com sucesso'
                 });
             } else {
-                res.status(404).send({
-                    message: 'Usuário não encontrado'
+                res.status(401).send({
+                    message: 'Senha incorreta'
                 });
             }
         } else {

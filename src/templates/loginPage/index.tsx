@@ -1,5 +1,6 @@
 import * as L from '../signIn/style';
 import * as yup from 'yup';
+import { FormContainer } from './style';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import verifyLogin from 'src/service/verifyLogin';
@@ -35,7 +36,7 @@ const LoginPage: React.FC = () => {
 
     return (
         <L.Container>
-            <L.FormContainer>
+            <FormContainer>
                 <L.Title>Login</L.Title>
                 <L.Form onSubmit={handleSubmit(onsubmit)}>
                     <L.InputContainer>
@@ -58,7 +59,7 @@ const LoginPage: React.FC = () => {
                     </L.InputContainer>
                     <L.Submit type="submit" value="Enviar" />
                 </L.Form>
-            </L.FormContainer>
+            </FormContainer>
             <ToastContainer theme="dark" />
         </L.Container>
     );
